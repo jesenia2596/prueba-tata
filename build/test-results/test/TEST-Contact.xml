@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Contact" tests="1" skipped="0" failures="1" errors="0" timestamp="2021-07-19T23:53:10" hostname="LAPTOP-J2VUB6GH" time="14.232">
+  <properties/>
+  <testcase name="Contact" classname="Contact" time="14.232">
+    <failure message="org.openqa.selenium.TimeoutException: Expected condition failed: waiting for alert to be present (tried for 2 second(s) with 500 milliseconds interval)&#10;Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'&#10;System info: host: 'LAPTOP-J2VUB6GH', ip: '192.168.83.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_251'&#10;Driver info: net.thucydides.core.webdriver.WebDriverFacade" type="org.openqa.selenium.TimeoutException">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for alert to be present (tried for 2 second(s) with 500 milliseconds interval)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAPTOP-J2VUB6GH', ip: '192.168.83.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_251'
+Driver info: net.thucydides.core.webdriver.WebDriverFacade
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at stepdefinitions.ContactSteDefinitions.message_is_sent(ContactSteDefinitions.java:71)
+	at ✽.Message is sent and display Thanks for the message!!(file:src/test/resources/features/Contact.feature:10)
+</failure>
+  </testcase>
+  <system-out><![CDATA[Feature: Contact
+
+  Scenario Outline: Contact ?[90m# src/test/resources/features/Contact.feature:3?[0m
+    ?[36mGiven user is page home Contact?[0m
+    ?[36mWhen Users click in Contact?[0m
+    ?[36mAnd I type information in the modal field Contact Email <ContactEmail>?[0m
+    ?[36mAnd I type information in the modal field Contact Name <ContactName>?[0m
+    ?[36mAnd I type information in the modal field Message <Message>?[0m
+    ?[36mThen Message is sent and display <Response>?[0m
+
+    Examples: 
+
+  Scenario Outline: Contact                                                   ?[90m# src/test/resources/features/Contact.feature:15?[0m
+18:53:10.668 [Test worker] INFO   - 
+ _____ _____ ____ _____   ____ _____  _    ____ _____ _____ ____  
+|_   _| ____/ ___|_   _| / ___|_   _|/ \  |  _ \_   _| ____|  _ \ 
+  | | |  _| \___ \ | |   \___ \ | | / _ \ | |_) || | |  _| | | | |
+  | | | |___ ___) || |    ___) || |/ ___ \|  _ < | | | |___| |_| |
+  |_| |_____|____/ |_|   |____/ |_/_/   \_\_| \_\|_| |_____|____/ 
+
+Contact(contact;contact)
+-------------------------------------------------------------------
+18:53:12.550 [Test worker] INFO  n.s.c.w.d.ProvideNewDriver - Instantiating driver
+18:53:12.550 [Test worker] INFO  n.s.c.w.d.ProvideNewDriver - Driver capabilities: Capabilities {acceptInsecureCerts: false, browserName: chrome, chrome.switches: --start-maximized;--test-ty..., goog:chromeOptions: {args: [--start-maximized, --test-type, --no-sandbox, --ignore-certificate-errors;\n, --disable-popup-blocking, --disable-default-apps, --disable-extensions-file-a..., --incognito, --disable-infobars, --disable-gpu], extensions: []}, loggingPrefs: org.openqa.selenium.logging..., platform: ANY, version: }
+    ?[32mGiven ?[0m?[32muser is page home Contact?[0m                                           ?[90m# ContactSteDefinitions.user_is_page_home_Contact()?[0m
+    ?[32mWhen ?[0m?[32mUsers click in Contact?[0m                                               ?[90m# ContactSteDefinitions.users_click_in_Contact()?[0m
+    ?[32mAnd ?[0m?[32mI type information in the modal field Contact Email?[0m?[32m?[1m yesenia@gmail.com?[0m ?[90m# ContactSteDefinitions.i_type_information_in_the_modal_field_Contact_Email(String)?[0m
+    ?[32mAnd ?[0m?[32mI type information in the modal field Contact Name ?[0m?[32m?[1mYesenia?[0m            ?[90m# ContactSteDefinitions.i_type_information_in_the_modal_field_Contact_Name(String)?[0m
+    ?[32mAnd ?[0m?[32mI type information in the modal field Message ?[0m?[32m?[1mEnvio de mensaje?[0m        ?[90m# ContactSteDefinitions.i_type_information_in_the_modal_field_Message(String)?[0m
+    ?[31mThen ?[0m?[31mMessage is sent and display ?[0m?[31m?[1mThanks for the message!!?[0m                 ?[90m# ContactSteDefinitions.message_is_sent(String)?[0m
+      ?[31morg.openqa.selenium.TimeoutException: Expected condition failed: waiting for alert to be present (tried for 2 second(s) with 500 milliseconds interval)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAPTOP-J2VUB6GH', ip: '192.168.83.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_251'
+Driver info: net.thucydides.core.webdriver.WebDriverFacade
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at stepdefinitions.ContactSteDefinitions.message_is_sent(ContactSteDefinitions.java:71)
+	at ?.Message is sent and display Thanks for the message!!(file:src/test/resources/features/Contact.feature:10)
+?[0m
+]]></system-out>
+  <system-err><![CDATA[jul 19, 2021 6:53:12 PM org.openqa.selenium.remote.DesiredCapabilities chrome
+INFORMACIÓN: Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
+Starting ChromeDriver 90.0.4430.24 (4c6d850f087da467d926e8eddb76550aed655991-refs/branch-heads/4430@{#429}) on port 47382
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+[1626738795.346][WARNING]: This version of ChromeDriver has not been tested with Chrome version 91.
+jul 19, 2021 6:53:15 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFORMACIÓN: Detected dialect: W3C
+]]></system-err>
+</testsuite>
